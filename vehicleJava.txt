@@ -1,0 +1,74 @@
+class Vehicle{
+    
+    String name;
+    int currentSpeed;
+    int currentDirection;
+    
+    // Vehicle(String name){
+    //   this.name=name;
+    //   this.currentSpeed =0;
+  
+    // }
+    
+    void steer(int direction){
+        this.currentDirection=direction;
+         System.out.println("steer method called: steering at "+this.currentDirection+" degrees..");
+    }
+    
+    void move(int speed,int direction){
+        this.currentSpeed=speed;
+        this.currentDirection=direction;
+        System.out.println("move method called:moving at speed of "+this.currentSpeed+" and direction of "+this.currentDirection+" degrees");
+    }
+
+}
+
+class Car extends Vehicle{
+   
+   int wheels;
+   String type;
+   int doors;
+   int gears;
+   boolean isManual;
+   int currentGear;
+   
+   void changeGear(int newGear){
+       this.currentGear=newGear;
+        System.out.println("changeGear method called:changed to "+this.currentGear+" gear");
+   }
+   
+   void changeSpeed(int newSpeed,int newDirection){
+    //   move(newSpeed,newDirection);
+     this.currentSpeed=newSpeed;
+     this.currentDirection=newDirection;
+        System.out.println("changeSpeed method called:speed ->"+this.currentSpeed+" direction -> "+currentDirection);
+       
+   }
+    
+}
+
+
+
+class Main{
+    public static void main(String[] args){
+      Vehicle v1=new Vehicle();
+      Car c1=new Car();
+      
+    //   c1.move(60,0);
+    //   c1.steer(90);
+    //   c1.changeGear(5);
+      c1.changeSpeed(100,0);
+    //   v1.move(50,0);
+    //   v1.steer(90);
+   
+      
+    }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
